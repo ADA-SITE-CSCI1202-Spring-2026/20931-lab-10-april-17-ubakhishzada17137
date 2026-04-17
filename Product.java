@@ -29,6 +29,7 @@ public class Product {
         Predicate<Product> isAffordable = p -> p.getPrice() < 50 && p.isInStock();
 
         products.removeIf(Predicate.not(isAffordable));
+        products.forEach(p -> System.out.println(p));
 
     }
 }
